@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta 
+        name="viewport" 
+        content="width=device-width, initial-scale=1.0">
+    <title>Joyeux Anniversaire Dénise | Future Juriste Extraordinaire</title>
+    <meta 
+        name="description" 
+        content="Célébration de l'anniversaire de Dénise, étudiante brillante en première année de droit. Un hommage musical pour marquer cette journée spéciale et son parcours académique prometteur.">
+    <meta 
+        name="keywords" 
+        content="Dénise, anniversaire, étudiant en droit, célébration, première année droit, chanson anniversaire, juriste">
+    <meta 
+        property="og:title" 
+        content="Joyeux Anniversaire Dénise | Future Juriste Extraordinaire">
+    <meta
+        property="og:description" 
+        content="Un site commémoratif pour célébrer l'anniversaire de Dénise, étudiante prometteuse en première année de droit. Découvrez la chanson personnalisée créée pour cette occasion spéciale.">
+    <meta property="og:type" content="website">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #9c1e2e;
+            --secondary: #d4af37;
+            --dark: #2c3e50;
+            --light: #f8f9fa;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ed 100%);
+            color: var(--dark);
+            overflow-x: hidden;
+        }
+
+        .playfair {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .dancing {
+            font-family: 'Dancing Script', cursive;
+        }
+
+        .fancy-border {
+            position: relative;
+            padding: 2rem;
+        }
+
+        .fancy-border::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border: 2px solid var(--secondary);
+            opacity: 0.7;
+            transform: scale(0.97);
+            z-index: -1;
+        }
+
+        .gold-text {
+            color: var(--secondary);
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+        }
+
+        .header-bg {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1589994965851-a8f479c573a9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .lyrics-container {
+            position: relative;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+        }
+
+        .lyrics-container::before {
+            content: '"';
+            position: absolute;
+            top: -20px;
+            left: 10px;
+            font-size: 72px;
+            color: var(--primary);
+            opacity: 0.7;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .lyrics-container::after {
+            content: '"';
+            position: absolute;
+            bottom: -60px;
+            right: 10px;
+            font-size: 72px;
+            color: var(--primary);
+            opacity: 0.7;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .scale-down-center:hover {
+            animation: scale-down-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        }
+
+        @keyframes scale-down-center {
+            0% { transform: scale(1); }
+            100% { transform: scale(0.95); }
+        }
+
+        .scroll-down {
+            animation: scrollDown 2s ease-in-out infinite;
+        }
+
+        @keyframes scrollDown {
+            0% { transform: translateY(0); opacity: 0.8; }
+            50% { transform: translateY(10px); opacity: 1; }
+            100% { transform: translateY(0); opacity: 0.8; }
+        }
+
+        .gavel-icon {
+            position: absolute;
+            opacity: 0.05;
+            font-size: 15rem;
+            z-index: -1;
+            color: var(--primary);
+        }
+
+        .law-bg {
+            background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url('https://images.unsplash.com/photo-1589994965851-a8f479c573a9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .ribbon {
+            position: absolute;
+            background: var(--primary);
+            color: white;
+            padding: 0.5rem 2rem;
+            transform: rotate(-45deg);
+            top: 30px;
+            left: -60px;
+            width: 200px;
+            text-align: center;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.8rem;
+            z-index: 10;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+        }
+
+        .confetti-effect {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: var(--secondary);
+            opacity: 0.7;
+        }
+
+        @media (max-width: 640px) {
+            .lyrics-container::before, .lyrics-container::after {
+                font-size: 48px;
+            }
+            .fancy-border {
+                padding: 1rem;
+            }
+            .gavel-icon {
+                font-size: 8rem;
+            }
+        }
+
+        /* Animation pour l'anniversaire */
+        .cake {
+            position: relative;
+            width: 250px;
+            height: 200px;
+            margin: 0 auto;
+        }
+
+        .plate {
+            width: 270px;
+            height: 110px;
+            position: absolute;
+            bottom: -10px;
+            left: -10px;
+            background-color: #ccc;
+            border-radius: 50%;
+            box-shadow: 0 2px 0 #b3b3b3, 0 4px 0 rgba(0, 0, 0, 0.1);
+            z-index: -1;
+        }
+
+        .cake-bottom {
+            width: 250px;
+            height: 100px;
+            background-color: #9c1e2e;
+            border-radius: 6px 6px 100px 100px;
+            position: absolute;
+            bottom: 0;
+        }
+
+        .cake-middle {
+            width: 240px;
+            height: 60px;
+            background-color: #ffb7a0;
+            border-radius: 6px 6px 80px 80px;
+            position: absolute;
+            bottom: 70px;
+            left: 5px;
+        }
+
+        .cake-top {
+            width: 220px;
+            height: 40px;
+            background-color: #fff;
+            border-radius: 6px 6px 60px 60px;
+            position: absolute;
+            bottom: 120px;
+            left: 15px;
+        }
+
+        .candle {
+            width: 8px;
+            height: 50px;
+            background: linear-gradient(to bottom, #ffef99, #ffde5c);
+            position: absolute;
+            bottom: 160px;
+            left: 50%;
+            margin-left: -4px;
+            border-radius: 4px;
+        }
+
+        .flame {
+            width: 15px;
+            height: 30px;
+            background: linear-gradient(to bottom, #ff5722, #ff9800);
+            border-radius: 8px 8px 8px 8px / 20px 20px 8px 8px;
+            box-shadow: 0 0 10px rgba(255, 87, 34, 0.7);
+            position: absolute;
+            top: -30px;
+            left: -3.5px;
+            animation: flicker 0.8s infinite alternate;
+        }
+
+        @keyframes flicker {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(0.8); opacity: 0.8; }
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+<div class="fixed top-0 right-0 z-50 p-4 mt-10">
+    <div class="ribbon">1ère année de droit</div>
+</div>
+
+<header class="header-bg text-white min-h-screen flex items-center justify-center relative py-20">
+    <div class="confetti-effect" id="confetti"></div>
+
+    <div class="container mx-auto px-4 py-10 text-center z-10">
+        <h1 class="dancing text-6xl md:text-8xl animate__animated animate__fadeIn mb-8 gold-text">Joyeux Anniversaire</h1>
+        <h2 class="playfair text-5xl md:text-7xl animate__animated animate__fadeIn animate__delay-1s mb-12">Dénise</h2>
+
+        <div class="my-12 cake">
+            <div class="plate"></div>
+            <div class="cake-bottom"></div>
+            <div class="cake-middle"></div>
+            <div class="cake-top"></div>
+            <div class="candle">
+                <div class="flame"></div>
+            </div>
+        </div>
+
+        <p class="text-xl md:text-2xl mb-12 animate__animated animate__fadeIn animate__delay-2s max-w-3xl mx-auto">
+            Une brillante étudiante en droit mérite une célébration à la hauteur de son talent. Aujourd'hui nous fêtons ta lumière!
+        </p>
+
+        <div class="animate__animated animate__bounce animate__infinite scroll-down mt-16">
+            <i class="fas fa-chevron-down fa-2x"></i>
+        </div>
+    </div>
+</header>
+
+<section class="py-20 px-4 bg-gradient-to-r from-red-900 to-red-700 text-white relative">
+    <div class="container mx-auto">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="playfair text-4xl md:text-5xl mb-8">Ton Parcours Juridique</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 my-16">
+                <div class="bg-white bg-opacity-10 p-6 rounded-lg hover:bg-opacity-20 transition-all duration-300 scale-down-center shadow-xl">
+                    <div class="text-4xl mb-4"><i class="fas fa-book"></i></div>
+                    <h3 class="text-2xl mb-3">Connaissance</h3>
+                    <p>Ta passion pour les études juridiques t'emmènera loin. La première année n'est que le début d'un parcours brillant.</p>
+                </div>
+
+                <div class="bg-white bg-opacity-10 p-6 rounded-lg hover:bg-opacity-20 transition-all duration-300 scale-down-center shadow-xl">
+                    <div class="text-4xl mb-4"><i class="fas fa-balance-scale"></i></div>
+                    <h3 class="text-2xl mb-3">Justice</h3>
+                    <p>Ton sens de l'équité et ta détermination sont les fondements solides de ta future carrière en droit.</p>
+                </div>
+
+                <div class="bg-white bg-opacity-10 p-6 rounded-lg hover:bg-opacity-20 transition-all duration-300 scale-down-center shadow-xl">
+                    <div class="text-4xl mb-4"><i class="fas fa-award"></i></div>
+                    <h3 class="text-2xl mb-3">Excellence</h3>
+                    <p>Chaque effort, chaque nuit d'étude, chaque défi relevé te rapproche de ton objectif. Continue de briller!</p>
+                </div>
+            </div>
+
+            <div class="mt-12">
+                <p class="text-2xl dancing">Que cette année soit remplie de succès et de bonheur</p>
+                <h3 class="text-5xl md:text-6xl playfair mt-6 animate__animated animate__pulse animate__infinite animate__slow gold-text">Joyeux Anniversaire!</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="bg-gray-900 py-8 px-4 text-center text-gray-300">
+    <div class="container mx-auto">
+        <p class="dancing text-2xl mb-3">Créé avec amour pour Dénise</p>
+        <p>Pour célébrer ton anniversaire et ta première année en droit</p>
+        <div class="mt-4">
+            <i class="fas fa-heart text-red-500 mx-1 animate__animated animate__heartBeat animate__infinite"></i>
+            <i class="fas fa-star text-yellow-400 mx-1"></i>
+            <i class="fas fa-graduation-cap mx-1"></i>
+            <i class="fas fa-star text-yellow-400 mx-1"></i>
+            <i class="fas fa-heart text-red-500 mx-1 animate__animated animate__heartBeat animate__infinite"></i>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Création de l'effet confetti
+    document.addEventListener('DOMContentLoaded', function() {
+        const confettiContainer = document.getElementById('confetti');
+        const colors = ['#9c1e2e', '#d4af37', '#ffffff', '#2c3e50', '#ff9800'];
+
+        for (let i = 0; i < 100; i++) {
+            let confetti = document.createElement('div');
+            confetti.classList.add('confetti');
+
+            const size = Math.random() * 15 + 5;
+            const backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+
+            confetti.style.width = `${size}px`;
+            confetti.style.height = `${size}px`;
+            confetti.style.backgroundColor = backgroundColor;
+            confetti.style.left = `${Math.random() * 100}%`;
+            confetti.style.top = `${Math.random() * 100}%`;
+            confetti.style.opacity = Math.random();
+            confetti.style.transform = `rotate(${Math.random() * 360}deg)`;
+
+            // Animation
+            const duration = Math.random() * 5 + 5;
+            confetti.style.animation = `fall ${duration}s linear infinite`;
+            confetti.style.animationDelay = `${Math.random() * 5}s`;
+
+            // Ajouter une animation de chute
+            const keyframes = `
+                    @keyframes fall {
+                        0% {
+                            transform: translateY(-100px) rotate(0deg);
+                            opacity: ${Math.random()};
+                        }
+                        100% {
+                            transform: translateY(${window.innerHeight}px) rotate(${Math.random() * 360}deg);
+                            opacity: 0;
+                        }
+                    }
+                `;
+
+            const style = document.createElement('style');
+            style.innerHTML = keyframes;
+            document.head.appendChild(style);
+
+            confettiContainer.appendChild(confetti);
+        }
+    });
+</script>
+</body>
+</html>
